@@ -1,6 +1,15 @@
 import './App.css'
+import SignUp from './SignUp'
+import SignIn from './SignIn'
+import { signOut } from "firebase/auth";
+import { auth } from "./firebase";
+
 
 function App() {
+    const handleLogout = async () => {
+        await signOut(auth);
+    };
+
     return (
         <div className="app-container">
             <header className="header">
@@ -8,7 +17,9 @@ function App() {
                     <div className="nav-logo">Design Thinking</div>
                     <ul className="nav-links">
                         <li><a href="#">About</a></li>
+                        <li><a href="#">MIT-RA</a></li>
                         <li><a href="#">Contact</a></li>
+                        <li><button onClick={handleLogout}>Logout</button></li>
                     </ul>
                 </nav>
                 <img

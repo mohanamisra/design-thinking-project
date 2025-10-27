@@ -1,9 +1,54 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
+import React, { StrictMode, useEffect, useState } from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import App from "./App.jsx";
+import Signup from "./SignUp.jsx";
+import Signin from "./SignIn.jsx";
+import { auth } from "./firebase.js";
+import { onAuthStateChanged } from "firebase/auth";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+function Root() {
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setLoading(false);
+        });
+        return () => unsubscribe();
+    }, []);
+
+    if (loading) return <p>Loading...</p>;
+
+    return (
+        <BrowserRouter>
+            <Routes>
+                {/* Protected Home Route */}
+                <Route
+                    path="/"
+                    element={user ? <App /> : <Navigate to="/signin" replace />}
+                />
+
+                {/* Public Routes */}
+                <Route
+                    path="/signup"
+                    element={!user ? <Signup /> : <Navigate to="/" replace />}
+                />
+                <Route
+                    path="/signin"
+                    element={!user ? <Signin /> : <Navigate to="/" replace />}
+                />
+
+                {/* Catch-all */}
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+        </BrowserRouter>
+    );
+}
+
+createRoot(document.getElementById("root")).render(
+    <StrictMode>
+        <Root />
+    </StrictMode>
+);
