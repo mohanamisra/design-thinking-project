@@ -2,7 +2,7 @@ import './App.css'
 
 function App() {
     return (
-        <>
+        <div className="app-container">
             <header className="header">
                 <img
                     src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80"
@@ -33,7 +33,7 @@ function App() {
             <footer className="footer">
                 <p>© {new Date().getFullYear()} Design Thinking Project. All rights reserved.</p>
             </footer>
-        </>
+        </div>
     )
 }
 
