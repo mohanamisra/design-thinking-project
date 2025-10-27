@@ -289,6 +289,167 @@ form .cta:hover {
   letter-spacing: 0.3px;
 }
 
+/* General container */
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff, #e3e8ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.signup-container h2 {
+  font-size: 2rem;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 320px;
+}
+
+/* Input fields */
+.signup-container input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-container input:focus {
+  border-color: #ffa100;
+  box-shadow: 0 0 5px rgba(74, 108, 247, 0.3);
+  outline: none;
+}
+
+/* Button */
+.signup-container button {
+  padding: 0.9rem 1rem;
+  background-color: #f26b21;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signup-container button:hover {
+  background-color: #f26b21;
+  transform: translateY(-2px);
+}
+
+/* Message text */
+.signup-container p {
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+/* Link styling */
+.signup-container a {
+  color: #f26b21;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+/* General container */
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9faff, #e8edff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.signin-container h2 {
+  font-size: 2rem;
+  color: #1c1c1c;
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+.signin-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 320px;
+}
+
+/* Input fields */
+.signin-container input {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ffa100;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signin-container input:focus {
+  border-color: #f26b21;
+  box-shadow: 0 0 5px rgba(74, 108, 247, 0.3);
+  outline: none;
+}
+
+/* Button */
+.signin-container button {
+  padding: 0.9rem 1rem;
+  background-color: #ffa100;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.signin-container button:hover {
+  background-color: #f26b21;
+  transform: translateY(-2px);
+}
+
+/* Message text */
+.signin-container p {
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+/* Link styling */
+.signin-container a {
+  color: #f26b21;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signin-container a:hover {
+  text-decoration: underline;
+}
+
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   .contact-container form {

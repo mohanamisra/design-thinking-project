@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "production": "mit-ra",
+    "default": "mit-ra"
+  },
+  "targets": {},
+  "etags": {}
+}
