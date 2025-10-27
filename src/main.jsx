@@ -7,6 +7,7 @@ import Signin from "./SignIn.jsx";
 import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "firebase/auth";
 import Mitra from "./Mitra.jsx";
+import About from "./About.jsx";
 
 function Root() {
     const [user, setUser] = useState(null);
@@ -41,6 +42,7 @@ function Root() {
                     element={!user ? <Signin /> : <Navigate to="/" replace />}
                 />
                 <Route path="/mitra" element={<Mitra />} />
+                <Route path="/about" element={<About />} />
 
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>

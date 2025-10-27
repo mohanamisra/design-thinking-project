@@ -6,6 +6,8 @@ import { auth } from "./firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
+import Footer from "./components/Footer";
+
 
 
 function App() {
@@ -53,9 +55,7 @@ function App() {
                 </p>
                 <button className="cta"><Link to="/mitra" className="button-link">Go To MIT-RA</Link></button>
             </section>
-            <footer className="footer">
-                <p>© {new Date().getFullYear()} MIT-RA</p>
-            </footer>
+            <Footer />
         </div>
     )
 }
