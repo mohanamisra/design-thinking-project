@@ -8,6 +8,7 @@ import { auth } from "./firebase.js";
 import { onAuthStateChanged } from "firebase/auth";
 import Mitra from "./Mitra.jsx";
 import About from "./About.jsx";
+import Contact from "./Contact.jsx";
 
 function Root() {
     const [user, setUser] = useState(null);
@@ -45,6 +46,7 @@ function Root() {
                 <Route path="/about" element={<About />} />
 
                 <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/contact" element={<Contact />} />
             </Routes>
         </BrowserRouter>
     );

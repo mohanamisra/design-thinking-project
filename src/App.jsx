@@ -6,7 +6,8 @@ import { auth } from "./firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
-import Footer from "./components/Footer";
+import Footer from "./Footer";
+
 
 
 
