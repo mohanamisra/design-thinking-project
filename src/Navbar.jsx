@@ -19,7 +19,7 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="nav-logo">MIT-RA</div>
+            <Link to="/" className="nav-logo">MIT-RA</Link>
             <ul className="nav-links">
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/contact">Contact</Link></li>

@@ -104,7 +104,6 @@ h2 {
   background: #d95c1b;
 }
 
-/* ---------- CONTENT ---------- */
 .content {
   padding: 2rem;
   max-width: 800px;
@@ -113,7 +112,6 @@ h2 {
   color: #1c1c1c;
 }
 
-/* ---------- FOOTER ---------- */
 .footer {
   text-align: center;
   padding: 1rem;
@@ -123,7 +121,6 @@ h2 {
   letter-spacing: 0.3px;
 }
 
-/* ---------- NAVBAR ---------- */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -149,6 +146,7 @@ h2 {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links a {
@@ -160,9 +158,9 @@ h2 {
 
 .nav-links a:hover {
   color: #f26b21;
+  text-decoration: underline;
 }
 
-/* ---------- LOGOUT BUTTON ---------- */
 .logout-btn {
   background-color: #f26b21;
   color: white;
@@ -178,7 +176,6 @@ h2 {
   background-color: #d95c1b;
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
