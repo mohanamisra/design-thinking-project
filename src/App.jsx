@@ -51,10 +51,10 @@ function App() {
                 <p>
                     Hope you have a great time with MIT-RA!
                 </p>
-                <button className="cta">Learn More</button>
+                <button className="cta"><Link to="/mitra" className="button-link">Go To MIT-RA</Link></button>
             </section>
             <footer className="footer">
-                <p>© {new Date().getFullYear()} Design Thinking Project. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} MIT-RA</p>
             </footer>
         </div>
     )
