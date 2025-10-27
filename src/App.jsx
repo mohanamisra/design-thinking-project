@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar.jsx";
 
 
 function App() {
@@ -24,44 +25,34 @@ function App() {
     return (
         <div className="app-container">
             <header className="header">
-                <nav className="navbar">
-                    <div className="nav-logo">Design Thinking</div>
-                    <ul className="nav-links">
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/mitra">MIT-RA</Link></li>
-                        <li><button className="logout-btn" onClick={handleLogout}>
-                            Log Out
-                        </button>
-                        </li>
-                    </ul>
-                </nav>
-                <img
-                    src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80"
+                <Navbar />                <img
+                    src="./src/assets/hero.jpg"
                     alt="Hero banner"
                     className="hero-image"
                 />
-                <h1 className="site-title">Design Thinking Project</h1>
+                <div className="site-title">
+                    <h1>Meet MIT-RA</h1>
+                    <h2>The college friend you deserve</h2>
+                </div>
             </header>
 
-            <section className="hero">
-                <h2>Empathize. Define. Ideate. Prototype. Test.</h2>
-                <p>
-                    A journey into creative problem solving and human-centered design.
-                </p>
-                <button className="cta">Learn More</button>
-            </section>
-
             <main className="content">
-                <h3>About the Project</h3>
+                <h3>About MIT-RA</h3>
                 <p>
-                    This project explores the principles of design thinking — putting the
-                    user first to craft better digital experiences. We focus on
-                    understanding real-world challenges and iterating towards innovative
-                    solutions.
+                    MIT-RA stands for the Manipal Institute of Technology Resource Assistant. More informally, MIT-RA's sole purpose in its life of 0's and 1's is to be your 'mitra', or that one friend who has the answers to all your questions. Have you ever wondered if a certain class has been cancelled and no one told you? Or who is that guy organising the workshop you're being asked to attend? Or when exactly is your exam that got rescheduled at the last minute? Try asking MIT-RA anything that you want to and she will try her best to help you out!.
                 </p>
             </main>
 
+            <section className="note">
+                <h3>Ask MIT-RA, or Help MIT-RA!</h3>
+                <p>
+                    The MIT-RA bot is currently in development, and may not have answers to all your questions just yet. If you have urgent questions to ask or would like to submit questions and answers to train MIT-RA on, please reach out to our team via the contact button in the navbar.
+                </p>
+                <p>
+                    Hope you have a great time with MIT-RA!
+                </p>
+                <button className="cta">Learn More</button>
+            </section>
             <footer className="footer">
                 <p>© {new Date().getFullYear()} Design Thinking Project. All rights reserved.</p>
             </footer>

@@ -47,8 +47,25 @@ body {
   color: #ffffff;
 }
 
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-style: italic;
+  opacity: 0.9;
+}
+
 /* ---------- HERO SECTION ---------- */
-.hero {
+.note {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #ffffff;
@@ -56,13 +73,7 @@ body {
   border-bottom: 3px solid #f26b21;
 }
 
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #1c1c1c;
-}
-
-.hero p {
+.note p {
   max-width: 600px;
   margin: 0 auto 1.5rem;
   line-height: 1.6;
