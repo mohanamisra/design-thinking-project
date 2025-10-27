@@ -13,11 +13,9 @@ body {
   font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   color: #222;
   background-color: #fafafa;
-  border: 1px solid red;
 }
 
 .app-container {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -91,4 +89,45 @@ body {
   background: #111;
   color: #eee;
   font-size: 0.9rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #2563eb;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
 }

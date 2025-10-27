@@ -4,6 +4,13 @@ function App() {
     return (
         <div className="app-container">
             <header className="header">
+                <nav className="navbar">
+                    <div className="nav-logo">Design Thinking</div>
+                    <ul className="nav-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
                 <img
                     src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80"
                     alt="Hero banner"
