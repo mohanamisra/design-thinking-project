@@ -3,12 +3,23 @@ import SignUp from './SignUp'
 import SignIn from './SignIn'
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 function App() {
+    const navigate = useNavigate();
+
     const handleLogout = async () => {
-        await signOut(auth);
+        try {
+            await signOut(auth);
+            alert("You have been logged out successfully.");
+            navigate("/signin"); // redirect to Sign In page
+        } catch (error) {
+            console.error("Logout failed:", error.message);
+        }
     };
+
 
     return (
         <div className="app-container">
@@ -16,10 +27,13 @@ function App() {
                 <nav className="navbar">
                     <div className="nav-logo">Design Thinking</div>
                     <ul className="nav-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">MIT-RA</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><button onClick={handleLogout}>Logout</button></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/mitra">MIT-RA</Link></li>
+                        <li><button className="logout-btn" onClick={handleLogout}>
+                            Log Out
+                        </button>
+                        </li>
                     </ul>
                 </nav>
                 <img
