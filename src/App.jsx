@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <>
+            <header className="header">
+                <img
+                    src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1920&q=80"
+                    alt="Hero banner"
+                    className="hero-image"
+                />
+                <h1 className="site-title">Design Thinking Project</h1>
+            </header>
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            <section className="hero">
+                <h2>Empathize. Define. Ideate. Prototype. Test.</h2>
+                <p>
+                    A journey into creative problem solving and human-centered design.
+                </p>
+                <button className="cta">Learn More</button>
+            </section>
+
+            <main className="content">
+                <h3>About the Project</h3>
+                <p>
+                    This project explores the principles of design thinking — putting the
+                    user first to craft better digital experiences. We focus on
+                    understanding real-world challenges and iterating towards innovative
+                    solutions.
+                </p>
+            </main>
+
+            <footer className="footer">
+                <p>© {new Date().getFullYear()} Design Thinking Project. All rights reserved.</p>
+            </footer>
+        </>
+    )
 }
 
 export default App
